@@ -1,0 +1,231 @@
+{
+    "plugins": [
+      {
+        "id": "removeDoctype",
+        "name": "移除doctype",
+        "name_en": "Remove doctype",
+        "active": true
+      },
+      {
+        "id": "removeXMLProcInst",
+        "name": "移除XML指令",
+        "name_en": "Remove XML proc inst",
+        "active": true
+      },
+      {
+        "id": "removeComments",
+        "name": "移除注释",
+        "name_en": "Remove comments",
+        "active": true
+      },
+      {
+        "id": "removeMetadata",
+        "name": "移除<metadata>",
+        "name_en": "Remove <metadata>",
+        "active": true
+      },
+      {
+        "id": "removeXMLNS",
+        "name": "移除xmlns",
+        "name_en": "Remove xmlns"
+      },
+      {
+        "id": "removeEditorsNSData",
+        "name": "移除编辑器数据",
+        "name_en": "Remove editors NS data",
+        "active": true
+      },
+      {
+        "id": "cleanupAttrs",
+        "name": "清除属性空格",
+        "name_en": "Cleanup attrs",
+        "active": true
+      },
+      {
+        "id": "inlineStyles",
+        "name": "内联样式",
+        "name_en": "Inline styles",
+        "active": true
+      },
+      {
+        "id": "minifyStyles",
+        "name": "压缩styles",
+        "name_en": "Minify styles",
+        "active": true
+      },
+      {
+        "id": "convertStyleToAttrs",
+        "name": "转换样式为属性",
+        "name_en": "Convert style to attrs",
+        "active": true
+      },
+      {
+        "id": "cleanupIDs",
+        "name": "清除ID",
+        "name_en": "Cleanup IDs",
+        "active": true
+      },
+      {
+        "id": "removeRasterImages",
+        "name": "移除栅格图像",
+        "name_en": "Remove raster images"
+      },
+      {
+        "id": "removeUselessDefs",
+        "name": "移除未使用的defs",
+        "name_en": "Remove unused defs",
+        "active": true
+      },
+      {
+        "id": "cleanupNumericValues",
+        "name": "数字四舍五入重写",
+        "name_en": "Cleanup numeric values",
+        "active": true
+      },
+      {
+        "id": "cleanupListOfValues",
+        "name": "优化列表的值",
+        "name_en": "Cleanup list of values"
+      },
+      {
+        "id": "convertColors",
+        "name": "压缩色值",
+        "name_en": "Compress colors",
+        "active": true
+      },
+      {
+        "id": "removeUnknownsAndDefaults",
+        "name": "移除未知值和默认值",
+        "name_en": "Remove unknown values and defaults",
+        "active": true
+      },
+      {
+        "id": "removeNonInheritableGroupAttrs",
+        "name": "移除不必要的组属性",
+        "name_en": "Remove unnecessary group attributes",
+        "active": true
+      },
+      {
+        "id": "removeUselessStrokeAndFill",
+        "name": "移除未使用的stroke和fill",
+        "name_en": "Remove unused stroke and fill",
+        "active": true
+      },
+      {
+        "id": "removeViewBox",
+        "name": "移除viewBox",
+        "name_en": "Remove viewBox",
+        "active": false
+      },
+      {
+        "id": "cleanupEnableBackground",
+        "name": "移除/整理可用背景",
+        "name_en": "Remove/cleanup enable-background",
+        "active": true
+      },
+      {
+        "id": "removeHiddenElems",
+        "name": "移除隐藏的元素",
+        "name_en": "Remove hidden elements",
+        "active": true
+      },
+      {
+        "id": "removeEmptyText",
+        "name": "移除空的text",
+        "name_en": "Remove empty text",
+        "active": true
+      },
+      {
+        "id": "convertShapeToPath",
+        "name": "图形转路径",
+        "name_en": "Convert shape to path",
+        "active": true
+      },
+      {
+        "id": "moveElemsAttrsToGroup",
+        "name": "移动元素属性到组",
+        "name_en": "Move element attributes to group",
+        "active": true
+      },
+      {
+        "id": "moveGroupAttrsToElems",
+        "name": "移动group属性到元素",
+        "name_en": "Move group attributes to elements",
+        "active": true
+      },
+      {
+        "id": "collapseGroups",
+        "name": "合并组",
+        "name_en": "Collapse groups",
+        "active": true
+      },
+      {
+        "id": "convertPathData",
+        "name": "转换路径数据",
+        "name_en": "Convert path data",
+        "active": true
+      },
+      {
+        "id": "convertTransform",
+        "name": "转换transform",
+        "name_en": "Convert transform",
+        "active": true
+      },
+      {
+        "id": "removeEmptyAttrs",
+        "name": "移除空的属性",
+        "name_en": "Remove empty attrs",
+        "active": true
+      },
+      {
+        "id": "removeEmptyContainers",
+        "name": "移除空的容器",
+        "name_en": "Remove empty containers",
+        "active": true
+      },
+      {
+        "id": "mergePaths",
+        "name": "合并路径",
+        "name_en": "Merge paths",
+        "active": true
+      },
+      {
+        "id": "removeUnusedNS",
+        "name": "移除未使用命名空间",
+        "name_en": "Remove unused namespaces",
+        "active": true
+      },
+      {
+        "id": "sortAttrs",
+        "name": "属性排序",
+        "name_en": "Sort attrs"
+      },
+      {
+        "id": "removeTitle",
+        "name": "移除<title>",
+        "name_en": "Remove <title>",
+        "active": true
+      },
+      {
+        "id": "removeDesc",
+        "name": "移除<desc>",
+        "name_en": "Remove <desc>",
+        "active": true
+      },
+      {
+        "id": "removeDimensions",
+        "name": "删除尺寸",
+        "name_en": "Remove dimensions"
+      },
+      {
+        "id": "removeStyleElement",
+        "name": "移除style元素",
+        "name_en": "Remove style element"
+      },
+      {
+        "id": "removeScriptElement",
+        "name": "移除script元素",
+        "name_en": "Remove script element"
+      }
+    ]
+  }
