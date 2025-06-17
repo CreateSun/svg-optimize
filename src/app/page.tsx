@@ -8,6 +8,7 @@ import { Introduction } from "./components/Introduction";
 import { useI18n } from "./i18n/useI18n";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Metadata } from "next";
 
 // 与PreviewTable保持一致
 interface SvgResult {
@@ -70,6 +71,20 @@ function ratio(origin: string, optimized: string) {
     10;
   return `${r}k → ${a}k ↓${n}%`;
 }
+
+export const metadata: Metadata = {
+  title: "Free Online Safe SVG Optimizer",
+  description: "A free online safe SVG optimizer that can optimize your SVG files and make them smaller and faster.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  keywords: ["Data safe SVG Optimizer", "Free Online Safe SVG Optimizer", "Free Online Safe SVG Optimizer", "Free Online Safe SVG Optimizer"],
+  openGraph: {
+    title: "Free Online Safe SVG Optimizer",
+    description: "A free online safe SVG optimizer that can optimize your SVG files and make them smaller and faster.",
+    images: ["/favicon.ico"],
+  },
+};
 
 export default function Home() {
   const t = useI18n();
