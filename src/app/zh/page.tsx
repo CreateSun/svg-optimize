@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Home from "../page";
+import { HomePage } from "../components/home";
 
 export const metadata: Metadata = {
     title: "免费在线安全SVG压缩工具",
@@ -15,4 +15,6 @@ export const metadata: Metadata = {
     },
   };
 
-export default Home;
+export default function Home() {
+  return <HomePage />;
+}
