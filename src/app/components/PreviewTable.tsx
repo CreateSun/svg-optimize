@@ -28,7 +28,7 @@ export default function PreviewTable({
   const textareaClass =
     "w-full h-40 border rounded-lg p-3 text-xs font-mono resize-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-all";
   return (
-    <div className="overflow-x-scroll w-[350px] md:w-full">
+    <div className="overflow-x-scroll sm:w-[350px] md:w-full">
       <table className="min-w-full bg-white rounded shadow text-sm border border-gray-100">
         <thead>
           <tr className="bg-gray-50">
