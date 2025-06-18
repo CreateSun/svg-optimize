@@ -1,11 +1,11 @@
 export default function Sitemap() {
   return [
     {
-      url: "https://svg-optimizer.com/zh",
+      url: "https://svg-optimize.com/zh",
       lastModified: new Date(),
     },
     {
-      url: "https://svg-optimizer.com",
+      url: "https://svg-optimize.com",
       lastModified: new Date(),
     },
   ];

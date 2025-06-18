@@ -8,7 +8,6 @@ import { Introduction } from "./Introduction";
 import { useI18n } from "../i18n/useI18n";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Metadata } from "next";
 
 // 与PreviewTable保持一致
 interface SvgResult {
