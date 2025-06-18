@@ -265,10 +265,10 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-200 relative">
       {/* 桌面端flex布局 */}
-      <div className="hidden md:flex h-screen">
+      <div className="flex h-screen md:px-0 px-4">
         {/* 侧边栏 */}
         <div
-          className={`flex flex-col h-full bg-white border-r border-gray-200 shadow-xl transition-all duration-200 ${
+          className={`hidden md:flex h-screen flex-col bg-white border-r border-gray-200 shadow-xl transition-all duration-200 ${
             sidebarOpen ? "w-64" : "w-16"
           }`}
         >
@@ -303,9 +303,9 @@ export function HomePage() {
         {/* 主面板 */}
         <main className="flex-1 flex flex-col pt-10 items-center h-screen  overflow-y-scroll ">
           <div className="flex-1flex flex-col items-center justify-center">
-            <div className="w-full max-w-4xl bg-white/90 rounded-2xl shadow-xl sm:p-10 flex flex-col gap-8 border border-gray-100">
+            <div className="w-full max-w-4xl bg-white/90 rounded-2xl shadow-xl p-2 sm:p-0 flex flex-col gap-8 border border-gray-100">
               <div className="flex justify-between items-center">
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-800 tracking-tight mb-2">
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-center text-gray-800 tracking-tight mb-2">
                   {t("title")}
                 </h1>
 

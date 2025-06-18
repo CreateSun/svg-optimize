@@ -13,39 +13,39 @@ export const Introduction = ({
       </h2>
       <ol className="list-decimal pl-6 space-y-4 text-gray-800">
         <li className="bg-gray-50 rounded p-4">
-          <span className="font-semibold text-blue-600">
+          <p className="font-semibold text-blue-600">
             {translation.totalFree_title}
-          </span>
+          </p>
           {translation.totalFree}
         </li>
         <li className="bg-gray-50 rounded p-4">
-          <span className="font-semibold text-blue-600">
+          <p className="font-semibold text-blue-600">
             {translation.noSizeLimit_title}
-          </span>
+          </p>
           {translation.noSizeLimit}
         </li>
         <li className="bg-gray-50 rounded p-4">
-          <span className="font-semibold text-blue-600">
+          <p className="font-semibold text-blue-600">
             {translation.safeAndSecure_title}
-          </span>
+          </p>
           {translation.safeAndSecure}
         </li>
         <li className="bg-gray-50 rounded p-4">
-          <span className="font-semibold text-blue-600">
+          <p className="font-semibold text-blue-600">
             {translation.fastProcessing_title}
-          </span>
+          </p>
           {translation.fastProcessing}
         </li>
         <li className="bg-gray-50 rounded p-4">
-          <span className="font-semibold text-blue-600">
+          <p className="font-semibold text-blue-600">
             {translation.highQualityCompression_title}
-          </span>
+          </p>
           {translation.highQualityCompression}
         </li>
         <li className="bg-gray-50 rounded p-4">
-          <span className="font-semibold text-blue-600">
+          <p className="font-semibold text-blue-600">
             {translation.flexibleConfiguration_title}
-          </span>
+          </p>
           {translation.flexibleConfiguration}
         </li>
       </ol>
