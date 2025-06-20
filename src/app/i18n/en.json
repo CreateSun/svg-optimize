@@ -31,5 +31,15 @@
         "highQualityCompression": "Ensures a high compression ratio while preserving the quality of the SVG image to the greatest extent.",
         "flexibleConfiguration_title": "Flexible Configuration:",
         "flexibleConfiguration": "Provides a rich set of compression parameters to meet different scenarios and needs, and customize the compression effect as needed."
-    }
+    },
+    "get_started": "Get Started",
+    "view_on_github": "View on GitHub",
+    "how_to_use": "How to Use",
+    "guide_steps": [
+        "Add SVG files: Drag & drop, select files, or paste SVG code directly.",
+        "Real-time optimization: Uploaded SVGs are optimized instantly. Fine-tune settings in the right-hand panel for immediate results.",
+        "Preview & compare: See the optimized SVG, check the size reduction, and compression ratio.",
+        "Get the result: Copy the optimized SVG code (raw, Base64, or URL-encoded) or download the file directly."
+    ],
+    "features": "Features"
 }

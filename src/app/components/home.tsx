@@ -8,6 +8,7 @@ import { Introduction } from "./Introduction";
 import { useI18n } from "../i18n/useI18n";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HowToUse from "./HowToUse";
 
 // 与PreviewTable保持一致
 interface SvgResult {
@@ -265,7 +266,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-200 relative">
       {/* 桌面端flex布局 */}
-      <div className="flex h-screen px-4">
+      <div className="flex h-screen">
         {/* 侧边栏 */}
         <div
           className={`hidden md:flex h-screen flex-col bg-white border-r border-gray-200 shadow-xl transition-all duration-200 ${
@@ -310,7 +311,7 @@ export function HomePage() {
                 </h1>
 
                 <div className="text-sm  border rounded-sm px-2 py-1 text-blue-600 mr-2">
-                  <Link href={`/${lang === "en" ? "zh" : ""}`}>
+                  <Link href={`/${lang === "en" ? "zh" : ""}`} className="hover:text-gray-700">
                     {lang === "en" ? "前往中文版 👉" : "English Version 👉"}
                   </Link>
                 </div>
@@ -321,21 +322,37 @@ export function HomePage() {
               </p>
 
               <UploadArea onFiles={handleFiles} t={t} />
-              <PreviewTable
-                results={results}
-                onCopy={handleCopy}
-                onDownload={handleDownload}
-                onDelete={handleDelete}
-                t={t}
-              />
+              <div className="flex-1 overflow-auto">
+                {results.length > 0 && (
+                  <PreviewTable
+                    results={results}
+                    onCopy={handleCopy}
+                    onDownload={handleDownload}
+                    onDelete={handleDelete}
+                    t={t}
+                  />
+                )}
+                <HowToUse />
+                <Introduction t={t} />
+              </div>
             </div>
-            <section className="py-12">
-              <Introduction t={t} />
-            </section>
           </div>
-          <footer className="text-gray-400 text-xs text-center select-none py-4">
-            &copy; {new Date().getFullYear()} SVG Optimizer | Powered by SVG
-            Optimizer
+          <footer className="text-gray-400 text-xs text-center select-none py-4 pt-8">
+            <div className="flex justify-center gap-8 py-4 text-sm">
+              <Link href={lang === "en" ? "/" : "/zh"} className="text-blue-600 hover:text-gray-700">
+                Home
+              </Link>
+              <Link
+                href={lang === "en" ? "/privacy" : "/zh/privacy"}
+                className="text-blue-600 hover:text-gray-700"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+            <div>
+              &copy; {new Date().getFullYear()} SVG Optimizer | Powered by SVG
+              Optimizer
+            </div>
           </footer>
         </main>
       </div>

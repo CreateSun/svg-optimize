@@ -31,5 +31,17 @@
         "highQualityCompression": "保证极高的压缩比例，同时最大程度保留 SVG 图像质量。",
         "flexibleConfiguration_title": "灵活配置：",
         "flexibleConfiguration": "提供丰富的压缩参数，满足不同场景和需求，按需自定义压缩效果。"
+    },
+    "get_started": "开始使用",
+    "view_on_github": "在 GitHub 上查看",
+    "how_to_use": "如何使用",
+    "guide_steps": [
+        "添加SVG文件：支持拖拽、选择文件，或直接粘贴SVG代码。",
+        "实时优化与配置：上传后的SVG会立即被优化。您可以在右侧的参数面板中调整设置，效果即时可见。",
+        "预览与对比：直观查看优化后的SVG图像，并参考文件大小的缩减情况和压缩率。",
+        "获取结果：方便地复制优化后的SVG代码（支持纯代码、Base64或URL编码格式），或直接下载文件。"
+    ],
+    "features": "功能特性",
+    "feature_list": {
     }
 }
