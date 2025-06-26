@@ -311,8 +311,11 @@ export function HomePage() {
                 </h1>
 
                 <div className="text-sm  border rounded-sm px-2 py-1 text-blue-600 mr-2">
-                  <Link href={`/${lang === "en" ? "zh" : ""}`} className="hover:text-gray-700">
-                    {lang === "en" ? "前往中文版 👉" : "English Version 👉"}
+                  <Link
+                    href={`/${lang === "en" ? "zh" : ""}`}
+                    className="hover:text-gray-700"
+                  >
+                    {"EN / 中"}
                   </Link>
                 </div>
               </div>
@@ -339,7 +342,10 @@ export function HomePage() {
           </div>
           <footer className="text-gray-400 text-xs text-center select-none py-4 pt-8">
             <div className="flex justify-center gap-8 py-4 text-sm">
-              <Link href={lang === "en" ? "/" : "/zh"} className="text-blue-600 hover:text-gray-700">
+              <Link
+                href={lang === "en" ? "/" : "/zh"}
+                className="text-blue-600 hover:text-gray-700"
+              >
                 Home
               </Link>
               <Link
@@ -350,7 +356,7 @@ export function HomePage() {
               </Link>
             </div>
             <div>
-              &copy; {new Date().getFullYear()} SVG Optimizer | Powered by SVG
+              &copy; {new Date().getFullYear()} - SVG Optimizer&nbsp;|&nbsp;Powered by SVG
               Optimizer
             </div>
           </footer>
