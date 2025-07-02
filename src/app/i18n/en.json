@@ -1,6 +1,6 @@
 {
     "title": "SVG Compressor",
-    "description": "Compress SVG files online for free, support custom parameters and copy/download/delete results",
+    "description": "Compress SVG files online for free, can compress about 50% of the volume, support custom parameters, visual compression, support one-click copy/download/delete results",
     "upload": "Upload SVG",
     "drag": "Drag and drop SVG files here or click to upload",
     "optimize": "Optimize",
