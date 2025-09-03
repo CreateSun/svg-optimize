@@ -15,6 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang={"en"}>
+      <Script
+        id="adsbygoogle"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2737057559362179"
+        crossOrigin="anonymous"
+      ></Script>
       <body>{children}</body>
       <Script src="/svgo-web.js"></Script>
     </html>
