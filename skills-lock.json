@@ -1,11 +1,29 @@
 {
   "version": 1,
   "skills": {
+    "coding-protocol": {
+      "source": "lencx/skills",
+      "sourceType": "github",
+      "skillPath": "skills/coding-protocol/SKILL.md",
+      "computedHash": "2ccd2595d185e9e90f4b4b66ea347e2aa67ab4a8633e2c7fb43e1d6af7a49292"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
+    },
+    "keel": {
+      "source": "lencx/skills",
+      "sourceType": "github",
+      "skillPath": "skills/keel/SKILL.md",
+      "computedHash": "3e588e7804f40de6e777a6a78faf5daf77147430a246a004ef5a3b7f5be8c1d1"
+    },
+    "qiaomu-ai-prd": {
+      "source": "joeseesun/qiaomu-ai-prd",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "ab8a64868f6d48ea5cac1eb07b1fc39ac34442fce71f0e542afc382789df9d18"
     },
     "ui-ux-pro-max": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
