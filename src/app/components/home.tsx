@@ -183,7 +183,7 @@ export function HomePage() {
     };
     window.addEventListener("paste", handlePaste);
     return () => window.removeEventListener("paste", handlePaste);
-  }, []);
+  }, [t]);
 
   // 处理文件上传/拖拽/粘贴
   const handleFiles = useCallback((files: FileList | File[]) => {
@@ -324,6 +324,18 @@ export function HomePage() {
                 {t("description")}
               </p>
 
+              <div className="flex justify-center">
+                <Link
+                  href="/svg-edit"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 underline decoration-gray-300 underline-offset-4 transition hover:text-gray-800 hover:decoration-gray-500"
+                >
+                  {lang === "zh"
+                    ? "需要手动编辑 SVG？试试 SVG 编辑器"
+                    : "Need manual SVG editing? Try the SVG Editor"}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+
               <UploadArea onFiles={handleFiles} t={t} />
               <div className="flex-1 overflow-auto">
                 {results.length > 0 && (
@@ -347,6 +359,12 @@ export function HomePage() {
                 className="text-blue-600 hover:text-gray-700"
               >
                 Home
+              </Link>
+              <Link
+                href="/svg-edit"
+                className="text-blue-600 hover:text-gray-700"
+              >
+                {lang === "zh" ? "SVG 编辑器" : "SVG Editor"}
               </Link>
               <Link
                 href={lang === "en" ? "/privacy" : "/zh/privacy"}

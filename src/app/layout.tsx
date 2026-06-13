@@ -3,6 +3,7 @@ import "./globals.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://svg-optimize.com"),
   other: {
     "baidu-site-verification": "codeva-YqdLRGZgt8",
   },
