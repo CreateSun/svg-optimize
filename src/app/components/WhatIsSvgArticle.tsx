@@ -87,12 +87,12 @@ export function WhatIsSvgArticle() {
           supports editing rather than the final drawing.
         </p>
         <p>
-          You can use{" "}
+          SVG Optimize is a free browser tool for people who need a smaller SVG
+          without uploading the file. Use{" "}
           <Link href="/" className="text-blue-700 underline underline-offset-4">
             SVG Optimize
           </Link>{" "}
-          to remove that extra markup locally. Files are not uploaded for that
-          optimization. If you want to change the markup by hand, the{" "}
+          to remove that extra markup locally. If you want to change the markup by hand, the{" "}
           <Link
             href="/svg-edit"
             className="text-blue-700 underline underline-offset-4"
@@ -123,6 +123,46 @@ export function WhatIsSvgArticle() {
           file than a PNG, while changing its appearance. Asking what is svg
           useful for is therefore a question about the artwork, not just the
           filename: choose it for drawings that benefit from vector structure.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-gray-200">
+                <th className="py-2 pr-4 font-semibold">Artwork</th>
+                <th className="py-2 pr-4 font-semibold">Better file</th>
+                <th className="py-2 font-semibold">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4">Logo, icon, or flat illustration</td>
+                <td className="py-2 pr-4">SVG</td>
+                <td className="py-2">Shapes are redrawn at the new size, so they do not pixelate.</td>
+              </tr>
+              <tr className="align-top">
+                <td className="py-2 pr-4">Photograph, screenshot, or fine texture</td>
+                <td className="py-2 pr-4">PNG or JPEG</td>
+                <td className="py-2">A pixel grid records the texture. Tracing it into paths can make a larger file.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-gray-600">
+          The{" "}
+          <a
+            href="https://www.w3.org/TR/SVG11/intro.html"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            W3C SVG specification
+          </a>{" "}
+          describes SVG as a language for two-dimensional graphics in XML. The{" "}
+          <a
+            href="https://www.w3.org/TR/png/"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            W3C PNG specification
+          </a>{" "}
+          describes PNG as a format for lossless raster images.
         </p>
       </section>
 

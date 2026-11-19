@@ -53,6 +53,45 @@ export function SvgViewBoxArticle() {
           width and height. They are extents, not the coordinates of the opposite
           corner.
         </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-gray-200">
+                <th className="py-2 pr-4 font-semibold">Order</th>
+                <th className="py-2 pr-4 font-semibold">Name</th>
+                <th className="py-2 font-semibold">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100">
+                <td className="py-2 pr-4">1</td>
+                <td className="py-2 pr-4">min-x</td>
+                <td className="py-2">Left edge of the coordinate rectangle</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-2 pr-4">2</td>
+                <td className="py-2 pr-4">min-y</td>
+                <td className="py-2">Top edge of the coordinate rectangle</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-2 pr-4">3</td>
+                <td className="py-2 pr-4">width</td>
+                <td className="py-2">How wide the rectangle is, not the right-edge coordinate</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4">4</td>
+                <td className="py-2 pr-4">height</td>
+                <td className="py-2">How tall the rectangle is, not the bottom-edge coordinate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-gray-600">
+          Source: the{" "}
+          <a href="https://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute" className="text-blue-700 underline underline-offset-4">viewBox attribute in the W3C SVG specification</a>.
+          The default alignment is described under{" "}
+          <a href="https://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute" className="text-blue-700 underline underline-offset-4">preserveAspectRatio</a>.
+        </p>
         <p>
           For example, 0 0 24 24 starts at the origin and covers twenty-four
           units in both directions. A rectangle described as 10 20 24 24 has the
@@ -110,7 +149,7 @@ export function SvgViewBoxArticle() {
           particular image.
         </p>
         <p>
-          This site has no switch for <code>preserveAspectRatio</code>. If an
+          SVG Optimize has no switch for <code>preserveAspectRatio</code>. If an
           image has unexpected empty space, inspect its coordinate box, viewport
           dimensions, and alignment setting together. Space can also be built
           into the artwork itself: a small shape inside a large coordinate
@@ -130,8 +169,9 @@ export function SvgViewBoxArticle() {
           symbol then breaks at another size.
         </p>
         <p>
-          On this site, Remove viewBox is off by default for that reason. When
-          using{" "}
+          In SVG Optimize, Remove viewBox is off by default for that reason.
+          SVG Optimize is a free browser tool for people who need a smaller SVG
+          without uploading the file. When using{" "}
           <Link href="/" className="text-blue-700 underline underline-offset-4">
             SVG Optimize
           </Link>

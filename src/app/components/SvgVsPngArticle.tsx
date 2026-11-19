@@ -22,7 +22,7 @@ export const svgVsPngFaqs: readonly {
   {
     question: "Can I turn a photo into an SVG here?",
     answer:
-      "No. This site does not trace photographs or convert PNG files into SVG. Placing a photo inside SVG markup elsewhere would still leave it as a pixel image. Creating a vector interpretation requires drawing or tracing tools, and the result can change the appearance while adding substantial path data.",
+      "No. SVG Optimize does not trace photographs or convert PNG files into SVG. Placing a photo inside SVG markup elsewhere would still leave it as a pixel image. Creating a vector interpretation requires drawing or tracing tools, and the result can change the appearance while adding substantial path data.",
   },
   {
     question: "Should I export a logo as SVG or PNG?",
@@ -67,6 +67,45 @@ export function SvgVsPngArticle() {
           The surrounding XML does not give it new detail or convert it into
           geometry. When comparing svg vs png, inspect the contents rather than
           trusting the extension to tell you whether every part is scalable.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-gray-200">
+                <th className="py-2 pr-4 font-semibold">Compared</th>
+                <th className="py-2 pr-4 font-semibold">SVG</th>
+                <th className="py-2 font-semibold">PNG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4 font-semibold">What it stores</td>
+                <td className="py-2 pr-4">Drawing instructions as XML text</td>
+                <td className="py-2">A rectangular grid of pixels</td>
+              </tr>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4 font-semibold">Scaling</td>
+                <td className="py-2 pr-4">Vector shapes stay sharp when enlarged</td>
+                <td className="py-2">Stretching past the pixel grid softens the image</td>
+              </tr>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4 font-semibold">Transparency</td>
+                <td className="py-2 pr-4">Unpainted areas and partial opacity</td>
+                <td className="py-2">Transparent and partly transparent pixels</td>
+              </tr>
+              <tr className="align-top">
+                <td className="py-2 pr-4 font-semibold">File size</td>
+                <td className="py-2 pr-4">Not always the smaller file</td>
+                <td className="py-2">Not always the smaller file</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-gray-600">
+          Sources: the{" "}
+          <a href="https://www.w3.org/TR/SVG11/intro.html" className="text-blue-700 underline underline-offset-4">W3C SVG specification</a>{" "}
+          and the{" "}
+          <a href="https://www.w3.org/TR/png/" className="text-blue-700 underline underline-offset-4">W3C PNG specification</a>.
         </p>
       </section>
 
@@ -139,10 +178,12 @@ export function SvgVsPngArticle() {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-blue-700">
-          What this site does not do
+          What SVG Optimize does not do
         </h2>
         <p>
-          This site does not convert PNG to SVG or SVG to PNG. For an explanation
+          SVG Optimize is a free browser tool for people who need a smaller SVG
+          without uploading the file. It does not convert PNG to SVG or SVG to
+          PNG. For an explanation
           of the vector format itself, read{" "}
           <Link
             href="/what-is-svg"

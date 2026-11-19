@@ -7,7 +7,7 @@ export const svgoFaqs: readonly {
   {
     question: "Is this website the official SVGO project?",
     answer:
-      "No. This website provides a browser interface around a bundled optimizer. Its controls and processing workflow belong to this site. References to svgo explain the underlying optimization approach; they do not mean this website publishes the official project or provides the same environment as every command-line installation.",
+      "No. SVG Optimize is a free browser tool that runs a bundled optimizer. It is not the official SVGO project, and it does not provide the same environment as every command-line installation.",
   },
   {
     question: "Does SVGO upload my SVG?",
@@ -22,7 +22,7 @@ export const svgoFaqs: readonly {
   {
     question: "Why does the command line produce a different file?",
     answer:
-      "Your installed svgo version, configuration, and enabled transformations can differ from this site's bundle and switches. These differences may affect path rewriting, attribute order, numeric precision, and the resulting bytes. Compare versions and settings using the same input before assuming that one output is incorrect simply because the files differ.",
+      "Your installed SVGO version, configuration, and enabled transformations can differ from the bundle and switches in SVG Optimize. These differences may affect path rewriting, attribute order, numeric precision, and the resulting bytes. Compare versions and settings using the same input before assuming that one output is incorrect simply because the files differ.",
   },
   {
     question: "Which switches should stay off?",
@@ -38,9 +38,9 @@ export function SvgoArticle() {
         SVGO is an open-source SVG optimizer that rewrites the markup of a
         drawing so the file can be smaller. When people discuss svgo, they may
         mean the optimizer itself, a command-line installation, or an interface
-        built around it. This site is a browser interface that runs a bundled
-        optimizer. It is not the official SVGO project, and its controls describe
-        this particular browser workflow.
+        built around it. SVG Optimize is a free browser tool for people who need
+        a smaller SVG without uploading the file. It runs a bundled optimizer and
+        is not the official SVGO project.
       </p>
 
       <section className="space-y-4">
@@ -76,10 +76,10 @@ export function SvgoArticle() {
           Browser and command line
         </h2>
         <p>
-          Here, files are read in the browser and are not uploaded for
-          optimization. The browser interface provides controls and previews so
-          you can examine a drawing while choosing settings. The site still
-          loads its own scripts, including analytics and ads. Local processing
+          In SVG Optimize, files are read in the browser and are not uploaded
+          for optimization. The page provides controls and previews so you can
+          examine a drawing while choosing settings. SVG Optimize still loads
+          its own scripts, including analytics and ads. Local processing
           of the SVG should therefore not be read as a claim that visiting the
           website causes no network activity.
         </p>
@@ -98,6 +98,44 @@ export function SvgoArticle() {
           build script, begin with a known source file and compare the complete
           result. Record the tool version and configuration together so later
           changes can be understood.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-gray-200">
+                <th className="py-2 pr-4 font-semibold">Compared</th>
+                <th className="py-2 pr-4 font-semibold">SVG Optimize in the browser</th>
+                <th className="py-2 font-semibold">SVGO on the command line</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4 font-semibold">Where the file is processed</td>
+                <td className="py-2 pr-4">In the browser. The SVG is not uploaded for optimization.</td>
+                <td className="py-2">On the computer where you install it.</td>
+              </tr>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4 font-semibold">Setup</td>
+                <td className="py-2 pr-4">Nothing to install.</td>
+                <td className="py-2">You choose the version and the config file.</td>
+              </tr>
+              <tr className="border-b border-gray-100 align-top">
+                <td className="py-2 pr-4 font-semibold">Several files</td>
+                <td className="py-2 pr-4">Each file is previewed and downloaded on its own.</td>
+                <td className="py-2">Scripts and CI can process a folder.</td>
+              </tr>
+              <tr className="align-top">
+                <td className="py-2 pr-4 font-semibold">Identical output</td>
+                <td className="py-2 pr-4">Not guaranteed.</td>
+                <td className="py-2">Depends on the installed version and switches.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-gray-600">
+          Source: the{" "}
+          <a href="https://github.com/svg/svgo" className="text-blue-700 underline underline-offset-4">SVGO project</a>{" "}
+          describes itself as an SVG optimizer. SVG Optimize is a separate browser interface and is not that project.
         </p>
       </section>
 
