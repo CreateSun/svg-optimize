@@ -16,6 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang={"en"}>
+      <head>
+        <script
+          defer
+          src="https://www.pvuv.ai/f.js"
+          data-site="j2f6ydCF"
+          data-api="https://in.pvuv.ai"
+        />
+      </head>
       <Script
         id="adsbygoogle"
         async
