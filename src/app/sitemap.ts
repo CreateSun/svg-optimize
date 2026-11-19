@@ -48,5 +48,11 @@ export default function Sitemap() {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: "https://svg-optimize.com/svg-nan-path",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 }
