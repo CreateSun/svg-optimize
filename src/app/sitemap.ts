@@ -24,5 +24,11 @@ export default function Sitemap() {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: "https://svg-optimize.com/what-is-svg",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 }

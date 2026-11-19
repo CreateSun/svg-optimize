@@ -381,6 +381,12 @@ export function HomePage({
                 {lang === "zh" ? "SVG 编辑器" : "SVG Editor"}
               </Link>
               <Link
+                href="/what-is-svg"
+                className="text-blue-600 hover:text-gray-700"
+              >
+                {lang === "zh" ? "SVG 是什么" : "What Is SVG"}
+              </Link>
+              <Link
                 href="/svg-compressor"
                 className="text-blue-600 hover:text-gray-700"
               >
