@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type EnglishFaq = {
   question: string;
   answer: string;
@@ -100,6 +102,17 @@ export function EnglishArticle() {
             format your destination expects, then check the asset in that context.
           </li>
         </ol>
+        <p>
+          This page is the optimizer; the{" "}
+          <Link
+            href="/svg-compressor"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG compressor
+          </Link>{" "}
+          page covers batch runs, the command-line tool, and which switches change
+          file size.
+        </p>
       </section>
 
       <section className="space-y-4">

@@ -18,5 +18,11 @@ export default function Sitemap() {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: "https://svg-optimize.com/svg-compressor",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 }

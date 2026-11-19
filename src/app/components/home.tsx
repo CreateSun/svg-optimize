@@ -73,7 +73,15 @@ function ratio(origin: string, optimized: string) {
   return `${r}k → ${a}k ↓${n}%`;
 }
 
-export function HomePage({ article }: { article?: ReactNode }) {
+export function HomePage({
+  article,
+  heading,
+  lede,
+}: {
+  article?: ReactNode;
+  heading?: string;
+  lede?: string;
+}) {
   const t = useI18n();
   const pathname = usePathname();
   const lang = pathname.startsWith("/zh") ? "zh" : "en";
@@ -308,7 +316,7 @@ export function HomePage({ article }: { article?: ReactNode }) {
             <div className="w-full max-w-4xl bg-white/90 rounded-2xl shadow-xl p-4 flex flex-col gap-8 border border-gray-100">
               <div className="flex justify-between items-center">
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-center text-gray-800 tracking-tight mb-2">
-                  {t("title")}
+                  {heading ?? t("title")}
                 </h1>
 
                 <div className="text-sm  border rounded-sm px-2 py-1 text-blue-600 mr-2">
@@ -322,7 +330,7 @@ export function HomePage({ article }: { article?: ReactNode }) {
               </div>
 
               <p className="text-center text-gray-500 mb-4 text-base sm:text-lg">
-                {t("description")}
+                {lede ?? t("description")}
               </p>
 
               <div className="flex justify-center">
@@ -371,6 +379,12 @@ export function HomePage({ article }: { article?: ReactNode }) {
                 className="text-blue-600 hover:text-gray-700"
               >
                 {lang === "zh" ? "SVG 编辑器" : "SVG Editor"}
+              </Link>
+              <Link
+                href="/svg-compressor"
+                className="text-blue-600 hover:text-gray-700"
+              >
+                {lang === "zh" ? "SVG 压缩" : "SVG Compressor"}
               </Link>
               <Link
                 href={lang === "en" ? "/privacy" : "/zh/privacy"}
