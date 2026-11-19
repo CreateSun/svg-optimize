@@ -367,7 +367,7 @@ export function HomePage({
             </div>
           </div>
           <footer className="text-gray-400 text-xs text-center select-none py-4 pt-8">
-            <div className="flex justify-center gap-8 py-4 text-sm">
+            <div className="flex flex-wrap justify-center gap-8 py-4 text-sm">
               <Link
                 href={lang === "en" ? "/" : "/zh"}
                 className="text-blue-600 hover:text-gray-700"
@@ -385,6 +385,21 @@ export function HomePage({
                 className="text-blue-600 hover:text-gray-700"
               >
                 {lang === "zh" ? "SVG 是什么" : "What Is SVG"}
+              </Link>
+              <Link
+                href="/svg-vs-png"
+                className="text-blue-600 hover:text-gray-700"
+              >
+                {lang === "zh" ? "SVG 与 PNG" : "SVG vs PNG"}
+              </Link>
+              <Link
+                href="/svg-viewbox"
+                className="text-blue-600 hover:text-gray-700"
+              >
+                viewBox
+              </Link>
+              <Link href="/svgo" className="text-blue-600 hover:text-gray-700">
+                SVGO
               </Link>
               <Link
                 href="/svg-compressor"

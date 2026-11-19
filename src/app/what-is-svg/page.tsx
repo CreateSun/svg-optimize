@@ -65,6 +65,18 @@ export default function WhatIsSvgPage() {
             <Link href="/" className="text-blue-600 hover:text-gray-700">
               Home
             </Link>
+            <Link href="/svg-vs-png" className="text-blue-600 hover:text-gray-700">
+              SVG vs PNG
+            </Link>
+            <Link
+              href="/svg-viewbox"
+              className="text-blue-600 hover:text-gray-700"
+            >
+              viewBox
+            </Link>
+            <Link href="/svgo" className="text-blue-600 hover:text-gray-700">
+              SVGO
+            </Link>
             <Link
               href="/svg-compressor"
               className="text-blue-600 hover:text-gray-700"
