@@ -141,14 +141,29 @@ export function HomePage({
       plugins: Object.fromEntries(params.map((p) => [p.id, p.active])),
     };
     const newResults: SvgResult[] = files.map((f) => {
+      // 空文件或读取失败的内容没有可优化的 markup，直接回落到原文，
+      // 避免优化器返回空结果时整页崩溃。
+      if (!f.content || !f.content.trim()) {
+        return {
+          id: f.id,
+          filename: f.filename,
+          optimizeSvg: f.content || "",
+          base64SVG: base64SVG(f.content || ""),
+          encodeSVG: encodeSVG(f.content || ""),
+          optimizeRatio: ratio(f.content || "", f.content || ""),
+        };
+      }
       // 加载原始SVG
       svgo({ id: f.id, action: "load", data: f.content });
-      // 优化
-      const res = svgo({ id: f.id, action: "process", settings }).result;
-      let optimized = res.data || f.content;
-      optimized = optimized
-        .replace("<style/>", "")
-        .replace("<defs></defs>", "");
+      // 优化；优化器可能返回空结果（处理失败），此时回落到原文，
+      // 不能把 undefined 当成字符串继续用。
+      const res = svgo({ id: f.id, action: "process", settings })?.result;
+      const candidate = res?.data;
+      // 坐标被写成 NaN 的文件无法正常渲染，宁可保留原文件。
+      const optimized =
+        typeof candidate === "string" && candidate && !/NaN/.test(candidate)
+          ? candidate.replace("<style/>", "").replace("<defs></defs>", "")
+          : f.content;
       return {
         id: f.id,
         filename: f.filename,
