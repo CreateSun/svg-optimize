@@ -1,6 +1,7 @@
 import Script from "next/script";
 import "./globals.css";
 import { Metadata } from "next";
+import DocumentHtml from "./components/DocumentHtml";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://svg-optimize.com"),
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang={"en"}>
+    <DocumentHtml>
       <head>
         <script
           defer
@@ -32,6 +33,6 @@ export default function RootLayout({
       ></Script>
       <body>{children}</body>
       <Script src="/svgo-web.js"></Script>
-    </html>
+    </DocumentHtml>
   );
 }

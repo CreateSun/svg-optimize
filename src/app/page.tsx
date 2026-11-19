@@ -1,21 +1,66 @@
 import React from "react";
 import { Metadata } from "next";
 import { HomePage } from "./components/home";
+import { EnglishArticle, englishFaqs } from "./components/EnglishArticle";
+
+const title = "SVG Optimize — Free Local SVG Optimizer for Browsers";
+const description = "Use SVG Optimize to reduce SVG file size with adjustable settings and previews; your files stay in the browser and are not uploaded.";
 
 export const metadata: Metadata = {
-  title: "SVG Optimizer - Free Online Safe SVG Optimizer use SVGO Online",
-  description: "A free online safe SVG optimizer that can optimize your SVG files using SVGO Online and make them smaller and faster.",
+  title,
+  description,
   icons: {
     icon: "/favicon.ico",
   },
-  keywords: ["SVG Optimizer", "SVGO Online Optimizer",  "Data safe SVG Optimizer", "Free Online Safe SVG Optimizer", "Free Online Safe SVG Optimizer", "Free Online Safe SVG Optimizer"],
+  alternates: {
+    canonical: "https://svg-optimize.com",
+  },
   openGraph: {
-    title: "SVG Optimizer - Free Online Safe SVG Optimizer use SVGO Online",
-    description: "A free online safe SVG optimizer that can optimize your SVG files using SVGO Online and make them smaller and faster.",
-    images: ["/favicon.ico"],
+    title,
+    description,
+    images: ["https://svg-optimize.com/favicon.ico"],
   },
 };
 
 export default function Home() {
-  return <HomePage />;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        name: "SVG Optimize",
+        url: "https://svg-optimize.com/",
+        applicationCategory: "DeveloperApplication",
+        operatingSystem: "Any",
+        offers: {
+          "@type": "Offer",
+          price: 0,
+          priceCurrency: "USD",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: englishFaqs.map(({ question, answer }) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: answer,
+          },
+        })),
+      },
+    ],
+  };
+
+  return (
+    <>
+      <HomePage article={<EnglishArticle />} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
+    </>
+  );
 }

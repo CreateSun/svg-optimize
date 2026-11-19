@@ -1,12 +1,6 @@
 export default function Sitemap() {
   return [
     {
-      url: "https://svg-optimize.com/zh",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
       url: "https://svg-optimize.com",
       lastModified: new Date(),
       changeFrequency: "daily",
@@ -23,12 +17,6 @@ export default function Sitemap() {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
-    },
-    {
-      url: "https://svg-optimize.com/zh/privacy",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
     },
   ];
 }

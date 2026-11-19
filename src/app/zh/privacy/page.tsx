@@ -55,6 +55,7 @@ const I18N = {
 };
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "隐私政策",
   description:
     "了解 SVG-Optimize 如何保护您的隐私。我们不收集或存储您的数据，所有处理都在您的浏览器中进行。",

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useCallback, useEffect } from "react";
+import type { ReactNode } from "react";
 import UploadArea from "./UploadArea";
 import ParamsPanel from "./ParamsPanel";
 import PreviewTable from "./PreviewTable";
@@ -72,7 +73,7 @@ function ratio(origin: string, optimized: string) {
   return `${r}k → ${a}k ↓${n}%`;
 }
 
-export function HomePage() {
+export function HomePage({ article }: { article?: ReactNode }) {
   const t = useI18n();
   const pathname = usePathname();
   const lang = pathname.startsWith("/zh") ? "zh" : "en";
@@ -302,7 +303,7 @@ export function HomePage() {
           </div>
         </div>
         {/* 主面板 */}
-        <main className="flex-1 flex flex-col pt-10 items-center h-screen  overflow-y-scroll ">
+        <main className="min-w-0 flex-1 flex flex-col pt-10 items-center h-screen  overflow-y-scroll ">
           <div className="flex-1 flex flex-col items-center justify-center w-full">
             <div className="w-full max-w-4xl bg-white/90 rounded-2xl shadow-xl p-4 flex flex-col gap-8 border border-gray-100">
               <div className="flex justify-between items-center">
@@ -347,9 +348,14 @@ export function HomePage() {
                     t={t}
                   />
                 )}
-                <HowToUse />
-                <Introduction t={t} />
+                {article === undefined && (
+                  <>
+                    <HowToUse />
+                    <Introduction t={t} />
+                  </>
+                )}
               </div>
+              {article}
             </div>
           </div>
           <footer className="text-gray-400 text-xs text-center select-none py-4 pt-8">

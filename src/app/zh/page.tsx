@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { HomePage } from "../components/home";
 
 export const metadata: Metadata = {
+    robots: { index: false, follow: true },
     title: "免费在线安全SVG压缩工具",
     description: "一个免费的在线SVG压缩工具，可以压缩您的SVG文件并使其更小， 全程数据不落地，保护您的数据安全，适合企业级使用。",
     icons: {
