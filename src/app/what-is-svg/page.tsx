@@ -86,6 +86,12 @@ export default function WhatIsSvgPage() {
             <Link href="/svg-edit" className="text-blue-600 hover:text-gray-700">
               SVG Editor
             </Link>
+            <Link
+              href="/svg-nan-path"
+              className="text-blue-600 hover:text-gray-700"
+            >
+              NaN in Paths
+            </Link>
             <Link href="/privacy" className="text-blue-600 hover:text-gray-700">
               Privacy Policy
             </Link>

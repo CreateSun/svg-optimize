@@ -77,6 +77,12 @@ export default function SvgNanPathPage() {
             >
               SVG Compressor
             </Link>
+            <Link href="/svg-viewbox" className="text-blue-600 hover:text-gray-700">
+              viewBox
+            </Link>
+            <Link href="/svg-vs-png" className="text-blue-600 hover:text-gray-700">
+              SVG vs PNG
+            </Link>
             <Link href="/svg-edit" className="text-blue-600 hover:text-gray-700">
               SVG Editor
             </Link>

@@ -417,6 +417,12 @@ export function HomePage({
                 SVGO
               </Link>
               <Link
+                href="/svg-nan-path"
+                className="text-blue-600 hover:text-gray-700"
+              >
+                {lang === "zh" ? "NaN 路径检查" : "NaN in Paths"}
+              </Link>
+              <Link
                 href="/svg-compressor"
                 className="text-blue-600 hover:text-gray-700"
               >
