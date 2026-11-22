@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://svg-optimize.com",
+    languages: {
+      en: "https://svg-optimize.com/",
+      "zh-CN": "https://svg-optimize.com/zh",
+      "x-default": "https://svg-optimize.com/",
+    },
   },
   openGraph: {
     title,
