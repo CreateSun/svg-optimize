@@ -7,6 +7,12 @@ export default function Sitemap() {
       priority: 1,
     },
     {
+      url: "https://svg-optimize.com/zh",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: "https://svg-optimize.com/privacy",
       lastModified: new Date(),
       changeFrequency: "monthly",
