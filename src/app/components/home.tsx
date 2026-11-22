@@ -435,6 +435,24 @@ export function HomePage({
                 Privacy Policy
               </Link>
             </div>
+            <div className="flex justify-center pt-2">
+              <a
+                href="https://peerpush.com/p/svg-optimize"
+                target="_blank"
+                rel="noopener"
+                aria-label="SVG Optimize on PeerPush"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://peerpush.com/p/svg-optimize/badge.png"
+                  alt="SVG Optimize on PeerPush"
+                  width={230}
+                  height={65}
+                  loading="lazy"
+                  style={{ width: 230, height: "auto" }}
+                />
+              </a>
+            </div>
             <div>
               &copy; {new Date().getFullYear()} - SVG Optimizer&nbsp;|&nbsp;Powered by SVG
               Optimizer
