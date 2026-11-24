@@ -1,0 +1,20 @@
+AGENTS.md
+  s_75a8243920db3b::t_73e3f4c4c7cead 22-28
+  s_75a8243920db3b::t_1bf1b479742856 29-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.52-trip",
+  "base_commit_sha": "1c1531e8504a9c034183fb3cb00894e27a4e46af",
+  "prompts": {},
+  "sessions": {
+    "s_75a8243920db3b": {
+      "agent_id": {
+        "tool": "deepseekharness",
+        "id": "session-d9728ad0-d750-45ab-b25f-90b4f3ecd7ca",
+        "model": "ada/claude-auto[1M]"
+      },
+      "human_author": "yucui <yucui@trip.com>"
+    }
+  }
+}
