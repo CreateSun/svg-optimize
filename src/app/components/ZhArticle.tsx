@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type ZhFaq = {
   question: string;
   answer: string;
@@ -91,6 +93,38 @@ export function SvgOptimizeZhArticle() {
             三种格式，按目标环境选择，然后放回实际场景检查。
           </li>
         </ol>
+        <p>
+          结果变小了不代表一定正确：坐标被写成 <code>NaN</code>{" "}
+          的文件体积会变小，但会渲染成空白。检查方法见{" "}
+          <Link
+            href="/svg-nan-path"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            NaN 路径检查
+          </Link>
+          。要知道文件里那个坐标框到底控制什么，读{" "}
+          <Link
+            href="/svg-viewbox"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG viewBox
+          </Link>
+          ；要在两种格式之间做选择，看{" "}
+          <Link
+            href="/svg-vs-png"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG 与 PNG
+          </Link>
+          。一次处理多个文件用{" "}
+          <Link
+            href="/svg-compressor"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG 压缩器
+          </Link>
+          。
+        </p>
       </section>
 
       <section className="space-y-4">

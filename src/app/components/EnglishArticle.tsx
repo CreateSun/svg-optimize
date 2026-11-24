@@ -111,7 +111,31 @@ export function EnglishArticle() {
             SVG compressor
           </Link>{" "}
           page covers batch runs, the command-line tool, and which switches change
-          file size.
+          file size. If a result comes back blank or smaller than it should be,
+          the{" "}
+          <Link
+            href="/svg-nan-path"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            NaN in path data
+          </Link>{" "}
+          page shows how to check for the one failure this tool will not report
+          on its own. To understand what the coordinate box in your file
+          actually does, read{" "}
+          <Link
+            href="/svg-viewbox"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG viewBox
+          </Link>
+          ; to compare formats before you commit, see{" "}
+          <Link
+            href="/svg-vs-png"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG vs PNG
+          </Link>
+          .
         </p>
       </section>
 
