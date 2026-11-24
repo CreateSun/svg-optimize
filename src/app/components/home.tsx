@@ -97,6 +97,31 @@ export function HomePage({
   const [showParams, setShowParams] = useState(false);
   // 侧边栏展开/收起
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  // 优化器 bundle 是否就绪。它只在本组件挂载时才加载（645KB），
+  // 内容页不再为它付费。
+  const [svgoReady, setSvgoReady] = useState(false);
+
+  // 按需加载 /svgo-web.js：只有渲染了 HomePage 的页面才需要它。
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if ((window as unknown as { svgo?: unknown }).svgo) {
+      setSvgoReady(true);
+      return;
+    }
+    const existing = document.querySelector<HTMLScriptElement>(
+      'script[data-svgo-bundle="1"]'
+    );
+    const script = existing ?? document.createElement("script");
+    const onLoad = () => setSvgoReady(true);
+    script.addEventListener("load", onLoad);
+    if (!existing) {
+      script.src = "/svgo-web.js";
+      script.async = true;
+      script.dataset.svgoBundle = "1";
+      document.body.appendChild(script);
+    }
+    return () => script.removeEventListener("load", onLoad);
+  }, []);
 
   // 动态加载config.json初始化参数
   useEffect(() => {
@@ -188,7 +213,7 @@ export function HomePage({
     } else if (!svgFiles.length) {
       setResults([]);
     }
-  }, [svgFiles, params, optimizeAll]);
+  }, [svgFiles, params, svgoReady, optimizeAll]);
 
   // 粘贴事件监听
   // const uploadAreaRef = useRef<HTMLDivElement>(null);

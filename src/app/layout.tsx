@@ -32,7 +32,6 @@ export default function RootLayout({
         crossOrigin="anonymous"
       ></Script>
       <body>{children}</body>
-      <Script src="/svgo-web.js"></Script>
     </DocumentHtml>
   );
 }
