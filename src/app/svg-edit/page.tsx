@@ -41,21 +41,12 @@ export const metadata: Metadata = {
     description:
       "Edit SVG code online with live preview, formatting tools, and local-only processing.",
     siteName: "SVG Optimize",
-    images: [
-      {
-        url: "/favicon.ico",
-        width: 64,
-        height: 64,
-        alt: "SVG Optimize",
-      },
-    ],
   },
   twitter: {
     card: "summary",
     title: "SVG Editor - Free Online SVG Code Editor with Live Preview",
     description:
       "Edit SVG code online with live preview, formatting tools, and local-only processing.",
-    images: ["/favicon.ico"],
   },
 };
 

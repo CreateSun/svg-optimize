@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     title,
     description,
     locale: "zh_CN",
-    images: ["https://svg-optimize.com/favicon.ico"],
   },
   robots: {
     index: true,

@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    images: ["https://svg-optimize.com/favicon.ico"],
   },
   robots: {
     index: true,
