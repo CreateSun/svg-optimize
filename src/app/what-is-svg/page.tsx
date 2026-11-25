@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
+    images: [{ url: "https://svg-optimize.com/opengraph-image", width: 1200, height: 630 }],
   },
   robots: {
     index: true,

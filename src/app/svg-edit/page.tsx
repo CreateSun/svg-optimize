@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     description:
       "Edit SVG code online with live preview, formatting tools, and local-only processing.",
     siteName: "SVG Optimize",
+    images: [{ url: "https://svg-optimize.com/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary",

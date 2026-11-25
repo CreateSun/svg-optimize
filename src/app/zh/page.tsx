@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     title,
     description,
     locale: "zh_CN",
+    images: [{ url: "https://svg-optimize.com/opengraph-image", width: 1200, height: 630 }],
   },
   robots: {
     index: true,
