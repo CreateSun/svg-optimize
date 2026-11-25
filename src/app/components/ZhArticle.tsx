@@ -123,6 +123,13 @@ export function SvgOptimizeZhArticle() {
           >
             SVG 压缩器
           </Link>
+          。想知道一次优化到底从文件里拿掉了什么、设计稿导出和图标库原图分别能省多少，看{" "}
+          <Link
+            href="/svg-optimization"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG 优化
+          </Link>
           。
         </p>
       </section>

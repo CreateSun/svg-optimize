@@ -98,6 +98,12 @@ export default function SvgoPage() {
               SVG Editor
             </Link>
             <Link
+              href="/svg-optimization"
+              className="text-blue-600 hover:text-gray-700"
+            >
+              SVG Optimization
+            </Link>
+            <Link
               href="/svg-compressor"
               className="text-blue-600 hover:text-gray-700"
             >

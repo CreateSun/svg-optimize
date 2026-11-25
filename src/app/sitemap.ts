@@ -13,6 +13,10 @@ const PAGE_SOURCES: Record<string, string[]> = {
     "src/app/svg-compressor/page.tsx",
     "src/app/components/CompressorArticle.tsx",
   ],
+  "/svg-optimization": [
+    "src/app/svg-optimization/page.tsx",
+    "src/app/components/SvgOptimizationArticle.tsx",
+  ],
   "/what-is-svg": [
     "src/app/what-is-svg/page.tsx",
     "src/app/components/WhatIsSvgArticle.tsx",
@@ -41,6 +45,7 @@ const FALLBACK: Record<string, string> = {
   "/privacy": "2025-06-20",
   "/svg-edit": "2026-06-13",
   "/svg-compressor": "2026-11-19",
+  "/svg-optimization": "2026-11-25",
   "/what-is-svg": "2026-11-22",
   "/svg-vs-png": "2026-11-22",
   "/svg-viewbox": "2026-11-22",
@@ -76,6 +81,7 @@ const ENTRIES: Entry[] = [
   { path: "/privacy", changeFrequency: "monthly", priority: 0.5 },
   { path: "/svg-edit", changeFrequency: "weekly", priority: 0.8 },
   { path: "/svg-compressor", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/svg-optimization", changeFrequency: "weekly", priority: 0.9 },
   { path: "/what-is-svg", changeFrequency: "monthly", priority: 0.6 },
   { path: "/svg-vs-png", changeFrequency: "monthly", priority: 0.6 },
   { path: "/svg-viewbox", changeFrequency: "monthly", priority: 0.6 },

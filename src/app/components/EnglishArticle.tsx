@@ -111,7 +111,15 @@ export function EnglishArticle() {
             SVG compressor
           </Link>{" "}
           page covers batch runs, the command-line tool, and which switches change
-          file size. If a result comes back blank or smaller than it should be,
+          file size. For what a pass actually removes from a file and how much
+          size a design-tool export loses compared with a pre-minified icon, read{" "}
+          <Link
+            href="/svg-optimization"
+            className="text-blue-700 underline underline-offset-4"
+          >
+            SVG optimization
+          </Link>
+          . If a result comes back blank or smaller than it should be,
           the{" "}
           <Link
             href="/svg-nan-path"
